@@ -1,0 +1,24 @@
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img class="brand-avatar" src="{{ '/profil.jpeg' | relative_url }}" alt="" width="36" height="36">
+        <div>
+          <strong>Tototcs<span class="brand-dot">.</span></strong>
+          <p>C++ / Fullstack developer · Open source enthusiast</p>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        <a href="https://github.com/Totgocpro" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://flowrhythm.net/" target="_blank" rel="noopener noreferrer">FlowRhythm</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© {{ 'now' | date: "%Y" }} Tototcs ; built with <span aria-hidden="true">❤️</span> and a lot of coffee.</p>
+      <p class="footer-meta">Static site powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener noreferrer">Jekyll</a> on GitHub Pages.</p>
+    </div>
+  </div>
+</footer>

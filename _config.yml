@@ -1,0 +1,37 @@
+title: Tototcs
+tagline: C++ / Fullstack Developer
+description: >-
+  Portfolio and blog of Tototcs ; a C++ / fullstack developer writing about
+  systems programming, open source tooling and the web.
+url: "https://totgocpro.github.io"
+baseurl: ""
+lang: en
+author: Tototcs
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+  hard_wrap: false
+  auto_ids: true
+  toc_levels: 1..4
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Blog
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules

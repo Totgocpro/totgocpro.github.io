@@ -1,0 +1,70 @@
+---
+layout: default
+---
+{% assign posts = site.posts | sort: "date" | reverse %}
+{% assign current_index = -1 %}
+{% for p in posts %}
+  {% if p.url == page.url %}
+    {% assign current_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+{% assign newer_index = current_index | minus: 1 %}
+{% assign older_index = current_index | plus: 1 %}
+
+<article class="post container-narrow">
+  <header class="post-header reveal">
+    <a class="back-link" href="{{ '/blog/' | relative_url }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to the blog</a>
+
+    {% if page.tags and page.tags.size > 0 %}
+    <div class="tag-row tag-row-left">
+      {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <h1 class="post-title">{{ page.title }}</h1>
+
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span class="meta-dot" aria-hidden="true">•</span>
+      <span><i class="far fa-clock" aria-hidden="true"></i> {{ content | number_of_words | plus: 199 | divided_by: 200 }} min read</span>
+      {% if page.author %}
+      <span class="meta-dot" aria-hidden="true">•</span>
+      <span>{{ page.author }}</span>
+      {% endif %}
+    </div>
+
+    {% if page.description %}
+    <p class="post-lead">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="post-body reveal">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer reveal">
+    <nav class="post-pager" aria-label="Post navigation">
+      {% if newer_index >= 0 %}
+      {% assign newer = posts[newer_index] %}
+      <a class="pager-link pager-newer" href="{{ newer.url | relative_url }}">
+        <span class="pager-label"><i class="fas fa-arrow-left" aria-hidden="true"></i> Newer post</span>
+        <span class="pager-title">{{ newer.title }}</span>
+      </a>
+      {% else %}
+      <span class="pager-link pager-empty" aria-hidden="true"></span>
+      {% endif %}
+
+      {% if older_index < posts.size %}
+      {% assign older = posts[older_index] %}
+      <a class="pager-link pager-older" href="{{ older.url | relative_url }}">
+        <span class="pager-label">Older post <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+        <span class="pager-title">{{ older.title }}</span>
+      </a>
+      {% endif %}
+    </nav>
+
+    <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}"><i class="fas fa-layer-group" aria-hidden="true"></i> All posts</a>
+  </footer>
+</article>

@@ -8,6 +8,7 @@
     <nav class="nav" id="site-nav" aria-label="Main navigation">
       <a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
       <a class="nav-link{% if page.url contains '/blog' %} active{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a class="nav-link{% if page.url contains '/tools' %} active{% endif %}" href="{{ '/tools/' | relative_url }}">Tools</a>
       <a class="nav-link" href="{{ '/' | relative_url }}#projects">Projects</a>
       <a class="nav-link" href="{{ '/' | relative_url }}#timeline">Timeline</a>
       <a class="nav-link" href="{{ '/' | relative_url }}#contact">Contact</a>

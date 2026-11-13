@@ -1,0 +1,48 @@
+---
+layout: default
+title: Tools
+permalink: /tools/
+description: A small bank of browser tools by Tototcs, JSON formatter, Base64, password generator and more, running entirely client-side.
+css: /assets/css/tools.css
+script: /assets/js/tools.js
+---
+
+<header class="page-hero">
+  <span class="section-kicker"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Tools</span>
+  <h1 class="gradient-text">Tool bank</h1>
+  <p>
+    A growing collection of small, random utilities I code from time to time.
+    Everything runs locally in your browser; nothing is sent anywhere.
+  </p>
+  <p class="hero-stats" id="tools-stats"></p>
+</header>
+
+<section class="section container">
+  <div class="tool-controls">
+    <div class="tool-search">
+      <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+      <input type="search" id="tool-search" placeholder="Search tools…" autocomplete="off" aria-label="Search tools">
+    </div>
+    <div class="tag-filter" id="tool-tags" role="group" aria-label="Filter tools by category"></div>
+  </div>
+
+  <div class="tool-grid" id="tool-grid"></div>
+
+  <div class="empty-state" id="tool-empty">
+    <p>No tool matches your search yet.</p>
+  </div>
+
+  <div class="workbench" id="workbench" hidden>
+    <div class="workbench-head">
+      <button class="btn btn-ghost btn-sm" id="workbench-back" type="button">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i> All tools
+      </button>
+      <div class="workbench-title">
+        <span class="workbench-icon" id="workbench-icon" aria-hidden="true"></span>
+        <h2 id="workbench-name"></h2>
+      </div>
+      <span class="tag" id="workbench-tag"></span>
+    </div>
+    <div class="workbench-body" id="workbench-body"></div>
+  </div>
+</section>

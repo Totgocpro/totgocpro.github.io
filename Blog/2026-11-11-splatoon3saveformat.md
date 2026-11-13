@@ -14,7 +14,7 @@ tags: [reverse, Splatoon3]
 - It commits changes via `nn::fs::Commit` rather than `nn::fs::CommitSaveData`.
 - The main file of interest is `save.dat`.
 - Existing web editors like [Flexlion's save editor](https://flexlion.github.io/saveeditor.html) process files server-side without publishing their implementation.
-- **Disclaimer:** This documentation is strictly for offline interoperability and format research (e.g., studying single-player data on an emulator or offline EmuMMC). **Never** use modified save files online—doing so will result in an immediate ban.
+- **Disclaimer:** This documentation is strictly for offline interoperability and format research (e.g., studying single-player data on an emulator or offline EmuMMC). **Never** use modified save files online : doing so will result in an immediate ban.
 
 ## File Layout & Headers
 

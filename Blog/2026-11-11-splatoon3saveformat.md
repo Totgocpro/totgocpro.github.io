@@ -6,7 +6,7 @@ description: "What I understand about the save format"
 tags: [reverse, Splatoon3]
 ---
 
-## EDITED : the old article was too explicit, Send me your save file if you want to decrypt it
+## EDITED : the old article was too explicit, Send me your save file on Session if you want to decrypt it
 
 ## Important stuff
 

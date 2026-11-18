@@ -18,7 +18,7 @@ tags: [reverse, Splatoon3]
 
 ## File Layout & Headers
 
-Before looking at encryption, here is the binary layout of `save.dat` (observed on v11.3.0):
+Before looking at encryption, here is the binary layout of `save.dat` (observed on v12.0.0):
 
 | Offset | Size | Field | Description |
 | :--- | :--- | :--- | :--- |
